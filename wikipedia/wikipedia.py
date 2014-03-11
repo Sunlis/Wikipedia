@@ -591,6 +591,12 @@ def donate():
 
   webbrowser.open('https://donate.wikimedia.org/w/index.php?title=Special:FundraiserLandingPage', new=2)
 
+def request(params):
+  '''
+  Make a request to the Wikipedia API using the given search parameters.
+  Returns a parsed dict of the JSON response.
+  '''
+  return _wiki_request(**params)
 
 def _wiki_request(**params):
   '''
